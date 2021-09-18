@@ -66,7 +66,7 @@ const Products = (props) => {
       <Table style={{ fontSize: 12 }} responsive="sm">
         <thead>
           <tr>
-            <th>#</th>
+            <th>sn</th>
             <th>Name</th>
             <th>Price</th>
             <th>Quantity</th>

@@ -3,6 +3,7 @@ import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
 import { NavLink, Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { signout } from "../../actions";
+import './style.css';
 
 /**
  * @author
@@ -52,8 +53,8 @@ const Header = (props) => {
       collapseOnSelect
       fixed="top"
       expand="lg"
-      bg="dark"
-      variant="dark"
+      className="color-nav"
+      variant="light"
       style={{ zIndex: 1 }}
     >
       <Container fluid>
