@@ -51,11 +51,15 @@ const Orders = (props) => {
           >
             <div>
               <div className="title">Items</div>
-              {orderItem.items.map((item, index) => (
-                <div className="value" key={index}>
-                  {item.productId.name}
-                </div>
-              ))}
+              {orderItem.items.map((item, index) => {
+                console.log(item.productId._id)
+
+                return (
+                  <div className="value" key={index}>
+                    {item.payablePrice}
+                  </div>
+                );
+              })}
             </div>
             <div>
               <span className="title">Total Price</span>
