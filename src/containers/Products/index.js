@@ -18,6 +18,7 @@ const Products = (props) => {
   const [price, setPrice] = useState("");
   const [description, setDescription] = useState("");
   const [categoryId, setCategoryId] = useState("");
+  const [location, setLocation] = useState("");
   const [productPictures, setProductPictures] = useState([]);
   const [show, setShow] = useState(false);
   const [productDetailModal, setProductDetailModal] = useState(false);
@@ -37,6 +38,7 @@ const Products = (props) => {
     form.append("price", price);
     form.append("description", description);
     form.append("category", categoryId);
+    form.append("location",location);
 
     for (let pic of productPictures) {
       form.append("productPicture", pic);
@@ -71,6 +73,7 @@ const Products = (props) => {
             <th>Price</th>
             <th>Quantity</th>
             <th>Category</th>
+            <th>Location</th>
             <th>Actions</th>
           </tr>
         </thead>
@@ -81,8 +84,9 @@ const Products = (props) => {
                   <td>2</td>
                   <td>{product.name}</td>
                   <td>{product.price}</td>
-                  <td>{product.quantity}</td>
+                  <td>{product.quantity}</td>              
                   <td>{product.category.name}</td>
+                  <td>{product.location}</td>
                   <td>
                     <button onClick={() => showProductDetailsModal(product)}>
                       info
@@ -133,11 +137,17 @@ const Products = (props) => {
           onChange={(e) => setPrice(e.target.value)}
         />
         <Input
+          label="Location"
+          value={location}
+          placeholder={`Location`}
+          onChange={(e) => setLocation(e.target.value)}
+        />
+        <Input
           label="Description"
           value={description}
           placeholder={`Description`}
           onChange={(e) => setDescription(e.target.value)}
-        />
+        />      
         <select
           className="form-control"
           value={categoryId}
@@ -203,6 +213,12 @@ const Products = (props) => {
           <Col md="6">
             <label className="key">Category</label>
             <p className="value">{productDetails.category.name}</p>
+          </Col>
+        </Row>
+        <Row>
+          <Col md="12">
+            <label className="key">Location</label>
+            <p className="value">{productDetails.location}</p>
           </Col>
         </Row>
         <Row>
