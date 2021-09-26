@@ -53,10 +53,11 @@ const Signup = (props) => {
   }
 
   return (
+    <div className="Signuppg">
     <Layout>
       <Container>
         {user.message}
-        <Row style={{ marginTop: "50px" }}>
+        <Row style={{ marginTop: "20%" }}>
           <Col md={{ span: 6, offset: 3 }}>
             <Form onSubmit={userSignup}>
               <Row>
@@ -102,7 +103,7 @@ const Signup = (props) => {
           </Col>
         </Row>
       </Container>
-    </Layout>
+    </Layout></div>
   );
 };
 
