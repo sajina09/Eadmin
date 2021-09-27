@@ -40,10 +40,11 @@ const Signin = (props) => {
     }
 
     return (
+        <div className='signin'> 
         <Layout>
             
             <Container>
-<<<<<<< HEAD
+
                 <div className='signin_main'>
                     <div className="image-container"> 
                         {<img  className="image" src={"https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v921-audi-wit-035-b_1.jpg?w=600&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=9b9b65c66762af7590a8d1f874f808c9"}  alt="" /> }
@@ -53,7 +54,8 @@ const Signin = (props) => {
                         <Row style={{ marginTop: '25%' }}>
                             <Col md={{ span: 20, offset: 1 }}>
                                 <Form onSubmit={userLogin}> 
-                                <div className='welcome'> Welcome<br></br> Back ! </div>
+                                <div className='welcome'>Hello ,</div>
+                                <div className='back'>Welcome Back!</div>
                                 <br></br>
                                     <div className='email_label'>
                                       
@@ -72,11 +74,11 @@ const Signin = (props) => {
                                         type="password"
                                         onChange={(e) => setPassword(e.target.value)}
                                     /></div>
-                                    <div className='signin_button'>
+                                    <br></br>
                                     <Button variant="primary" type="submit">
                                         Sign In
                                     </Button>
-                                    </div>
+                                    
                                 </Form>
                             </Col>
                         </Row>
@@ -85,35 +87,7 @@ const Signin = (props) => {
 
                     </div>
                 </div> </Container>
-=======
-                <Row style={{ marginTop: '20%' }}>
-                    <Col md={{span: 6, offset: 3}}>
-                        <Form onSubmit={userLogin}>
-                            <Input 
-                                label="Email"
-                                placeholder="Email"
-                                value={email}
-                                type="email"
-                                onChange={(e) => setEmail(e.target.value)}
-                            />
-
-                            <Input 
-                                label="Password"
-                                placeholder="Password"
-                                value={password}
-                                type="password"
-                                onChange={(e) => setPassword(e.target.value)}
-                            />
-                            <Button variant="primary" type="submit">
-                                Submit
-                            </Button>
-                        </Form>
-                    </Col>
-                </Row>
-                
-            </Container>
->>>>>>> 816a1916c20721fbc49bf9a1a24a7a62c82d4677
-        </Layout>
+ </Layout></div>
     )
 }
 

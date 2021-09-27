@@ -6,6 +6,7 @@ import { Redirect } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { signup } from "../../actions";
 import { useEffect } from "react";
+import "./style.css";
 
 /**
  * @author
@@ -53,15 +54,28 @@ const Signup = (props) => {
   }
 
   return (
-    <div className="Signuppg">
+    
+    <div className='signup'> 
     <Layout>
       <Container>
-        {user.message}
-        <Row style={{ marginTop: "20%" }}>
-          <Col md={{ span: 6, offset: 3 }}>
+        <div className="signup_main">
+        <div className="image-contain"> 
+                        {<img  className="image" src={"https://image.freepik.com/free-vector/organic-farming-concept-illustration_23-2148411925.jpg"}  alt="" /> }
+         </div>
+        <div className='signup_container' >
+
+        <div className='new'>Sign Up</div>
+        <div className='create'>Create a new Account.</div>
+                
+                {user.message}
+                <div className='newlabel'>
+
+        <Row style={{ marginTop: "4%" }}>
+          <Col md={{ span: 10, offset: 1}}>
             <Form onSubmit={userSignup}>
               <Row>
                 <Col md={6}>
+                
                   <Input
                     label="First Name"
                     placeholder="First Name"
@@ -96,14 +110,19 @@ const Signup = (props) => {
                 type="password"
                 onChange={(e) => setPassword(e.target.value)}
               />
+              
+              
               <Button variant="primary" type="submit">
-                Submit
+                Sign Up
               </Button>
             </Form>
           </Col>
-        </Row>
+        </Row></div>
+        </div>
+        </div>
       </Container>
-    </Layout></div>
+    </Layout>
+    </div>
   );
 };
 

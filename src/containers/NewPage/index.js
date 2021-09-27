@@ -6,6 +6,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import linearCategories from '../../helpers/linearCategories';
 import { useSelector, useDispatch } from 'react-redux';
 import { createPage } from '../../actions';
+import "./style.css";
 
 /**
 * @author

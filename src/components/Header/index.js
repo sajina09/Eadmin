@@ -23,7 +23,9 @@ const Header = (props) => {
       <Nav>
         <li className="nav-item">
           <span className="nav-link" onClick={logout}>
+          <div className="nav-sign">
             Signout
+            </div>
           </span>
         </li>
       </Nav>
@@ -36,12 +38,15 @@ const Header = (props) => {
         {/* <Nav.Link href="#deets">Signin</Nav.Link> */}
         <li className="nav-item">
           <NavLink to="signin" className="nav-link">
+          <div className="nav-sign">
             Signin
+            </div> 
           </NavLink>
         </li>
         <li className="nav-item">
           <NavLink to="signup" className="nav-link">
-            Signup
+            <div className="nav-sign">
+            Signup</div>
           </NavLink>
         </li>
       </Nav>
@@ -60,7 +65,9 @@ const Header = (props) => {
       <Container fluid>
         {/* <Navbar.Brand href="#home">Admin Dashboard</Navbar.Brand> */}
         <Link to="/" className="navbar-brand">
-        Welcome to EAgro Admin
+          <div className="welcome-eagro">
+        Admin Dashboard
+        </div>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
