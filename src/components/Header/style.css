@@ -1,7 +1,8 @@
 .color-nav{
-    background:  rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-   
+    background: #DCE35B;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #45B649, #DCE35B);  
+    background: linear-gradient(to right, #45B649, #DCE35B); 
+    
 }
 .navbar-brand{  
 font-style: normal;
@@ -10,7 +11,8 @@ font-size: 30px;
   
 }
 .nav-sign{
-    color: bisque;
+    color:  #45B649;
+    
     font-weight: bold;
     margin-right: 30px;
 
@@ -25,7 +27,7 @@ background-color:rgba(148,187,233,1)100%
  transform: translateY(4px);
 }
 .welcome-eagro{
-    color:bisque ;
+    color:#DCE35B ;
    font-size: 20px;
    font-weight: bold;
 

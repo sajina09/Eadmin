@@ -12,6 +12,7 @@ import './style.css';
 const Layout = (props) => {
   return(
     <>
+    
        <Header />
        {
          props.sidebar ?

@@ -1,6 +1,9 @@
 .signin{
-    background: rgb(238,174,202);
-background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+   
+background: #DCE35B;  
+background: -webkit-linear-gradient(to right, #45B649, #DCE35B);  
+background: linear-gradient(to right, #45B649, #DCE35B); 
+
     height: 720px;
    
     display: flex;
@@ -46,12 +49,15 @@ border-radius: 30px;
 .welcome
 {
     font-size: 32px;
-    color:  #ABE4CD;
+    color:  #45B649;
+   
     font-weight: bold;
     
 }
 .back{
     font-size: 20px;
-    color:  #ABE4CD;
+   
+    color:  #45B649;
+
     font-weight: bolder;
 }
